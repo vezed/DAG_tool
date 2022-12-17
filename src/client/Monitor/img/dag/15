@@ -1,0 +1,18 @@
+digraph {
+	t0 [color=green]
+	t1 [color=green]
+	t2 [color=green]
+	t3 [color=green]
+	t4 [color=green]
+	S [color=green]
+	E [color=green]
+	t0 -> E
+	t1 -> E
+	t2 -> t4
+	t3 -> E
+	t4 -> E
+	S -> t0
+	S -> t1
+	S -> t2
+	S -> t3
+}

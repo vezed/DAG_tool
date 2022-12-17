@@ -1,0 +1,19 @@
+digraph {
+	t0 [color=black]
+	t1 [color=black]
+	t2 [color=black]
+	t3 [color=black]
+	t4 [color=black]
+	S [color=green]
+	E [color=red]
+	t0 -> t2
+	t0 -> t3
+	t1 -> t2
+	t1 -> t3
+	t2 -> t3
+	t2 -> t4
+	t3 -> t4
+	t4 -> E
+	S -> t0
+	S -> t1
+}

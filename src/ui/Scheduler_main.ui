@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Scheduler_main</class>
+ <widget class="QMainWindow" name="Scheduler_main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1152</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>调度仿真</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>311</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>191</horstretch>
+      <verstretch>141</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>调度集</string>
+    </property>
+    <widget class="QListWidget" name="SchedulerSetList">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>291</width>
+       <height>111</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>311</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>191</horstretch>
+      <verstretch>231</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>调度配置信息</string>
+    </property>
+    <widget class="QWidget" name="formLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>291</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="horizontalSpacing">
+       <number>10</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="processor_num">
+        <property name="text">
+         <string>处理器数量</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="processor_num_edit">
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>处理器模式</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="processor_mode_combo">
+        <item>
+         <property name="text">
+          <string>动态调度</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>静态调度</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="preemptive">
+        <property name="text">
+         <string>抢占模式</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="preempt_mode_combo">
+        <item>
+         <property name="text">
+          <string>是</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>否</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="priority_assignment">
+        <property name="text">
+         <string>抢占周期</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="preempt_clock">
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>优先级分配算法</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="priority_assignment_combo">
+        <item>
+         <property name="text">
+          <string>RMS</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>DMS</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>FPS</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CPFE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>EDF</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>LSS</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QPushButton" name="confirm">
+        <property name="text">
+         <string>确认</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>140</y>
+      <width>821</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>10</horstretch>
+      <verstretch>4</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>561</width>
+      <height>271</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>各DAG调度结果</string>
+    </property>
+    <widget class="QTableWidget" name="dag_result">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>791</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>名称</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>完工时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>CPU利用率</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>运行超时</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>超时时间</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>821</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+      <horstretch>20</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>561</width>
+      <height>101</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>总体调度结果</string>
+    </property>
+    <widget class="QTableWidget" name="scheduler_result">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>791</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <row>
+      <property name="text">
+       <string>Scheduler1</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>完工时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>CPU利用率</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>超时数量</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

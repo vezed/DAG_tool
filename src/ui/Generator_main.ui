@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Generator_main</class>
+ <widget class="QMainWindow" name="Generator_main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1620</width>
+    <height>771</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>生成器</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>1311</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1309</width>
+       <height>699</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>276</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>生成结果</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QListWidget" name="generate_result"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1620</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="generate_button">
+    <property name="title">
+     <string>生成</string>
+    </property>
+    <addaction name="actionperiodic"/>
+    <addaction name="actionaperiodic"/>
+   </widget>
+   <widget class="QMenu" name="view_button">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="actiongraphview"/>
+    <addaction name="actiontableview"/>
+   </widget>
+   <widget class="QMenu" name="property_ana">
+    <property name="title">
+     <string>静态属性分析</string>
+    </property>
+    <addaction name="actionconfiguration"/>
+   </widget>
+   <addaction name="generate_button"/>
+   <addaction name="view_button"/>
+   <addaction name="property_ana"/>
+  </widget>
+  <action name="actiontable">
+   <property name="text">
+    <string>table</string>
+   </property>
+  </action>
+  <action name="actionperiodic">
+   <property name="text">
+    <string>周期任务集</string>
+   </property>
+  </action>
+  <action name="actionaperiodic">
+   <property name="text">
+    <string>非周期任务集</string>
+   </property>
+  </action>
+  <action name="actiongraphview">
+   <property name="text">
+    <string>图片</string>
+   </property>
+  </action>
+  <action name="actiontableview">
+   <property name="text">
+    <string>表格</string>
+   </property>
+  </action>
+  <action name="actiontreeview">
+   <property name="text">
+    <string>树</string>
+   </property>
+  </action>
+  <action name="actionconfiguration">
+   <property name="text">
+    <string>配置</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
